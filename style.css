@@ -1,0 +1,121 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 12px 8px;
+  border: 1px solid #000000;
+  background-color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #000000;
+}
+
+.pagina {
+  min-height: 680px;
+  padding: 8px 0 24px;
+  background-color: #cdf0ff;
+}
+
+.cabecalho,
+.layout,
+.rodape {
+  width: 77%;
+  margin-inline: auto;
+}
+
+.cabecalho,
+.menu,
+.rodape {
+  border: 6px solid #ff0000;
+  background-color: #0066aa;
+  color: #ffffff;
+}
+
+h1,
+h2 {
+  margin: 0;
+  font-size: 28px;
+  line-height: 1.2;
+}
+
+.cabecalho,
+.rodape {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  text-align: center;
+}
+
+.cabecalho {
+  min-height: 136px;
+}
+
+.layout {
+  display: flex;
+  gap: 8px;
+  margin-block: 10px;
+  min-height: 420px;
+}
+
+.menu {
+  flex: 0 0 26%;
+  padding: 8px;
+  overflow-wrap: anywhere;
+}
+
+.conteudo {
+  flex: 1;
+  min-width: 0;
+  border: 6px solid #000000;
+  padding: 8px 10px;
+  background-color: #ffffff;
+  overflow-wrap: anywhere;
+}
+
+.conteudo p {
+  margin: 20px 0 16px;
+}
+
+.conteudo ul {
+  padding-left: 38px;
+  line-height: 1.3;
+}
+
+.rodape {
+  min-height: 74px;
+}
+
+.somente-leitor {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+  .layout {
+    flex-direction: column;
+    gap: 10px;
+    min-height: auto;
+    margin-top: 6px;
+  }
+
+  .menu {
+    flex: auto;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .conteudo {
+    flex: auto;
+    min-height: 354px;
+  }
+}
